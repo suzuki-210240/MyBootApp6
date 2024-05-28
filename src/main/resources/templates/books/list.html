@@ -17,11 +17,11 @@
         <hr />
         <table>
             <tr th:each="book:${books}">
-                <td th:text="${book_id}">100</td>
-                <td th:text="${book_title}">タイトルA</td>
-                <td th:text="${book_writter}">著者A</td>
-                <td th:text="${book_publisher}">出版社A</td>
-                <td th:text="${book_price}">100</td>
+                <td th:text="${book.id}">100</td>
+                <td th:text="${book.title}">タイトルA</td>
+                <td th:text="${book.writter}">著者A</td>
+                <td th:text="${book.publisher}">出版社A</td>
+                <td th:text="${book.price}">100</td>
                 <td>
                     <form th:action="@{/books/edit}" method="post">
                         <input type="submit" name="form" value="編集" />

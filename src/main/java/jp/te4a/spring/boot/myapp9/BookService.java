@@ -1,4 +1,6 @@
-package jp.te4a.spring.boot.myapp8;
+package jp.te4a.spring.boot.myapp9;
+
+import java.util.Optional;
 
 import java.util.*;
 
@@ -12,22 +14,22 @@ public class BookService {
     BookRepository bookRepository;
 
     public BookForm create(BookForm bookForm){
-        bookForm.setId(bookRepository.getBookId());
+        //bookForm.setId(bookRepository.getBookId());
         BookBean bookBean = new BookBean();
         BeanUtils.copyProperties(bookForm, bookBean);
-        bookRepository.create(bookBean);
+        bookRepository.save(bookBean);
         return bookForm;
     }
 
     public BookForm update(BookForm bookForm){
         BookBean bookBean = new BookBean();
         BeanUtils.copyProperties(bookForm, bookBean);
-        bookRepository.update(bookBean);
+        bookRepository.save(bookBean);
         return bookForm;
     }
 
     public void delete(Integer id){
-        bookRepository.delete(id);
+        bookRepository.deleteById(id);
     }
     public List<BookForm> findAll(){
         List<BookBean> beanList = bookRepository.findAll();
@@ -39,11 +41,12 @@ public class BookService {
         }
         return formList;
     }
-
     public BookForm findOne(Integer id){
-        BookBean bookBean = bookRepository.findOne(id);
+        Optional<BookBean> opt = bookRepository.findById(id);
         BookForm bookForm = new BookForm();
-        BeanUtils.copyProperties(bookBean, bookForm);
+        opt.ifPresent(book ->{
+            BeanUtils.copyProperties(opt.get(), bookForm);
+        });
         return bookForm;
     }
 }
