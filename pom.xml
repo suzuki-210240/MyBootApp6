@@ -8,8 +8,8 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>jp.te4a.spring.boot.myapp9</groupId>
-	<artifactId>mybootapp9</artifactId>
+	<groupId>jp.te4a.spring.boot.myapp11</groupId>
+	<artifactId>mybootapp11</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mybootapp9</name>
 	<description>Demo project for Spring Boot</description>
@@ -47,6 +47,17 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate.validator</groupId>
+			<artifactId>hibernate-validator</artifactId>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
