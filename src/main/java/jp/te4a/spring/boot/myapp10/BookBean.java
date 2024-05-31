@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp9;
+package jp.te4a.spring.boot.myapp10;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -13,7 +13,7 @@ import jakarta.persistence.*;
 @NoArgsConstructor
 public class BookBean {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(nullable = false)
     private String title;

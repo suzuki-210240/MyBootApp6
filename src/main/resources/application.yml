@@ -1,5 +1,10 @@
 #spring:
-#    mvc:
-#        view:
-#            prefix: /WEB-INF/views/ 
-#            suffix: .jsp
+#    jpa:
+#        properties:
+#            hibernate:
+#                id:
+#                    new_generator_mappings: false
+#                dialect:
+#                   supportsSequences: false
+
+    
