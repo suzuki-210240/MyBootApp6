@@ -1,6 +1,6 @@
-package jp.te4a.spring.boot.myapp12;
+package jp.te4a.spring.boot.myapp13.validate;
 import jakarta.validation.*;
-import jp.te4a.spring.boot.myapp12.TaroValid.Writter;
+import jp.te4a.spring.boot.myapp13.validate.TaroValid.Writter;
 
 public class TaroValisate implements ConstraintValidator<Writter,String>{
     String ok;

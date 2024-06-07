@@ -1,4 +1,4 @@
-package com.example.mybootapp6;
+package com.example.mybootapp13;
 
 import org.junit.jupiter.api.Test;
 
