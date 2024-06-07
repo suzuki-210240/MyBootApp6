@@ -6,6 +6,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.*;
 //import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm;
 import org.springframework.security.web.SecurityFilterChain;
@@ -31,12 +32,7 @@ public class SecurityConfig extends WebSecurityConfiguration{
 
     @Bean
     static PasswordEncoder passwordEncoder(){
-        //CharSequence secret = "i";
-        var  PE = Pbkdf2PasswordEncoder.defaultsForSpringSecurity_v5_8();
-        
-        System.out.println("encode:"+PE);
-        return PE;
-        //return new Pbkdf2PasswordEncoder(secret,1,1,SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA1);
+        return new BCryptPasswordEncoder();
     }
 
     @Bean
