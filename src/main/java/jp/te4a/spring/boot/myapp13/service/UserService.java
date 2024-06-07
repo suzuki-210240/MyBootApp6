@@ -2,22 +2,27 @@ package jp.te4a.spring.boot.myapp13.service;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
-import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm;
+//import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm;
+//import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
+//import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm;
 import org.springframework.stereotype.Service;
 import jp.te4a.spring.boot.myapp13.bean.UserBean;
 import jp.te4a.spring.boot.myapp13.form.UserForm;
 import jp.te4a.spring.boot.myapp13.repository.UserRepository;
-import java.lang.CharSequence;
+//import java.lang.CharSequence;
 
 @Service
 public class UserService {
-    CharSequence secret = "i";
+    //CharSequence secret = "i";
     @Autowired
     UserRepository userRepository;
 
     public UserForm create(UserForm userForm){
-        userForm.setPassword(new Pbkdf2PasswordEncoder(secret,1,1,SecretKeyFactoryAlgorithm.PBKDF2WithHmacSHA1).encode(userForm.getPassword()));
-
+        var  PE = Pbkdf2PasswordEncoder.defaultsForSpringSecurity_v5_8();
+        var test = PE.encode(userForm.getPassword());
+        System.out.println("create:"+test);
+        userForm.setPassword(test);
+        
         UserBean userBean = new UserBean();
         BeanUtils.copyProperties(userForm, userBean);
 

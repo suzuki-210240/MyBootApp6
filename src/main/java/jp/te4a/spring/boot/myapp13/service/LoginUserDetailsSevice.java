@@ -27,6 +27,7 @@ public class LoginUserDetailsSevice implements UserDetailsService{
     public UserDetails loadUserByUsername(String username)throws
     UsernameNotFoundException{
         Optional<UserBean> opt = userRepository.findById(username);
+        System.out.println("username:" + username);
         UserBean user = opt.orElseThrow(() -> new UsernameNotFoundException("The requested user is not found."));
         String[] list = { RoleCode.getCode(user.getRoleId())};
         return new LoginUserDetails(user,AuthorityUtils.createAuthorityList(list));

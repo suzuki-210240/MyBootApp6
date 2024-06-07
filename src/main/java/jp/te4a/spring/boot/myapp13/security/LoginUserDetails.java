@@ -15,13 +15,5 @@ public class LoginUserDetails extends User{
     public LoginUserDetails(UserBean userBean,List<GrantedAuthority> authList ){
         super(userBean.getUsername(),userBean.getPassword(), authList);
         this.user=userBean;
-        /*if(true){
-            authList = AuthorityUtils.createAuthorityList("ROLE_ADMIN","ROLE_USER","ROLE_OTHER");
-        }else if(false){
-            authList = AuthorityUtils.createAuthorityList("ROLE_USER","ROLE_OTHER");
-        }else{
-            authList = AuthorityUtils.createAuthorityList("ROLE_OTHER");
-        }*/
-        
     }
 }
