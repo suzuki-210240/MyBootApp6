@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp13.service;
+package jp.te4a.spring.boot.myapp13_v2.service;
 
 import java.util.Optional;
 //import java.util.List;
@@ -7,14 +7,13 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import jp.te4a.spring.boot.myapp13.bean.UserBean;
-//import jp.te4a.spring.boot.myapp13.config.RoleCode;
-import jp.te4a.spring.boot.myapp13.security.LoginUserDetails;
+
+import jp.te4a.spring.boot.myapp13_v2.bean.UserBean;
+import jp.te4a.spring.boot.myapp13_v2.repository.UserRepository;
+import jp.te4a.spring.boot.myapp13_v2.security.LoginUserDetails;
+
 //import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
-
-import jp.te4a.spring.boot.myapp13.repository.UserRepository;
-//import jp.te4a.spring.boot.myapp13.config.RoleCode;
 
 @Service
 public class LoginUserDetailsSevice implements UserDetailsService{

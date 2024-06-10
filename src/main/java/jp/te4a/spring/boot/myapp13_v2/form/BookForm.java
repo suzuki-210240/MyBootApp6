@@ -1,8 +1,8 @@
-package jp.te4a.spring.boot.myapp13.form;
+package jp.te4a.spring.boot.myapp13_v2.form;
 
 import jakarta.validation.constraints.*;
-import jp.te4a.spring.boot.myapp13.validate.ECValid.TestValid;
-import jp.te4a.spring.boot.myapp13.validate.TaroValid.Writter;
+import jp.te4a.spring.boot.myapp13_v2.validate.ECValid.TestValid;
+import jp.te4a.spring.boot.myapp13_v2.validate.TaroValid.Writter;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

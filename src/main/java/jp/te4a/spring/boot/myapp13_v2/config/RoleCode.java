@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp13.config;
+package jp.te4a.spring.boot.myapp13_v2.config;
 
 public enum RoleCode {
     ROLE_ADMIN((byte)1,"権限","ADMIN"),

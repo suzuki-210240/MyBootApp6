@@ -1,6 +1,6 @@
-package jp.te4a.spring.boot.myapp13.validate;
+package jp.te4a.spring.boot.myapp13_v2.validate;
 import jakarta.validation.*;
-import jp.te4a.spring.boot.myapp13.validate.ECValid.TestValid;
+import jp.te4a.spring.boot.myapp13_v2.validate.ECValid.TestValid;
 
 public class ECValisate implements ConstraintValidator<TestValid,String>{
     String param;

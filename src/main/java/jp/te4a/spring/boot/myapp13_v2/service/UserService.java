@@ -1,4 +1,4 @@
-package jp.te4a.spring.boot.myapp13.service;
+package jp.te4a.spring.boot.myapp13_v2.service;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -7,10 +7,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 //import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm;
 import org.springframework.stereotype.Service;
-import jp.te4a.spring.boot.myapp13.bean.UserBean;
-import jp.te4a.spring.boot.myapp13.form.UserForm;
-import jp.te4a.spring.boot.myapp13.repository.UserRepository;
-//import java.lang.CharSequence;
+
+import jp.te4a.spring.boot.myapp13_v2.bean.UserBean;
+import jp.te4a.spring.boot.myapp13_v2.form.UserForm;
+import jp.te4a.spring.boot.myapp13_v2.repository.UserRepository;
 
 @Service
 public class UserService {
