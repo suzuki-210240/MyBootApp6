@@ -25,7 +25,8 @@ public class SecurityConfig extends WebSecurityConfiguration{
     public WebSecurityCustomizer webSecurityCustomizer(){
         return (web) -> web.ignoring().requestMatchers(
             new AntPathRequestMatcher("/webjars/**"),
-            new AntPathRequestMatcher("/css/**")
+            new AntPathRequestMatcher("/css/**"),
+            new AntPathRequestMatcher("/error")
 
         );
     }

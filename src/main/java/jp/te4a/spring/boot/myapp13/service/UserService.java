@@ -2,7 +2,7 @@ package jp.te4a.spring.boot.myapp13.service;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
+//import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 //import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm;
 //import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 //import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder.SecretKeyFactoryAlgorithm;
@@ -24,7 +24,7 @@ public class UserService {
         System.out.println("create:"+test);
         userForm.setPassword(test);*/
         var feg = new BCryptPasswordEncoder().encode(userForm.getPassword());
-        System.out.println(feg);
+        //System.out.println(feg);
         userForm.setPassword(feg);
 
         UserBean userBean = new UserBean();
