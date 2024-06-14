@@ -17,5 +17,5 @@ public class UserBean {
     @JsonIgnore
     private String password;
     @Column(name = "Role_id",nullable = true)
-    private Byte roleId;
+    private Byte roleId = 1;
 }

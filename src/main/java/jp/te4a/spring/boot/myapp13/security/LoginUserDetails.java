@@ -12,8 +12,8 @@ import lombok.EqualsAndHashCode;
 public class LoginUserDetails extends User{
     private final UserBean user;
     //private final List<GrantedAuthority> granteList;
-    public LoginUserDetails(UserBean userBean,List<GrantedAuthority> authList ){
-        super(userBean.getUsername(),userBean.getPassword(), authList);
+    public LoginUserDetails(UserBean userBean,boolean accountNotExpried,boolean credenttialsNotExprired,boolean accountNonLocked,List<GrantedAuthority> authList ){
+        super(userBean.getUsername(),userBean.getPassword(),true,true,true,true,authList);
         this.user=userBean;
     }
 }
