@@ -30,7 +30,6 @@ public class UserService {
         UserBean userBean = new UserBean();
         BeanUtils.copyProperties(userForm, userBean);
 
-
         userRepository.save(userBean);
         return userForm;
     }
