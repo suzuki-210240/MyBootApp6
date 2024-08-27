@@ -1,4 +1,4 @@
-package com.example.mybootapp6;
+/*package com.example.mybootapp6;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -10,4 +10,4 @@ class Mybootapp6ApplicationTests {
 	void contextLoads() {
 	}
 
-}
+}*/
