@@ -21,7 +21,11 @@ public class HelloController {
 
     @RequestMapping(value="books/list", method=RequestMethod.POST)
 
-     public ModelAndView postForm(@RequestParam("id") String id, @RequestParam("title") String title,@RequestParam("writter") String writter, @RequestParam("publisher") String publisher,@RequestParam("price") String price) {
+     public ModelAndView postForm(@RequestParam("id") String id,
+      @RequestParam("title") String title,
+      @RequestParam("writter") String writter,
+      @RequestParam("publisher") String publisher,
+      @RequestParam("price") String price) {
          ModelAndView mv = new ModelAndView("books/list");
          bookService.save(new BookBean(Integer.valueOf(id), title, writter, publisher, Integer.valueOf(price)));
         mv.addObject("books", bookService.findAll());
